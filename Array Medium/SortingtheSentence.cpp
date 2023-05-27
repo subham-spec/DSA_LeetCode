@@ -1,14 +1,13 @@
-#include <iostream>
-#include <vector>
-#include <string>
+#include <bits/stdc++.h>
+#include <sstream> 
 using namespace std;
 string sortSentence(string s) {
         vector<pair<string, int>> words;
         
         // Split the sentence into words and their positions
-        istringstream iss(s);
+        stringstream ss(s);
         string word;
-        while (iss >> word) {
+        while (ss >> word) {
             int pos = word.back() - '0';
             word.pop_back();
             words.push_back({word, pos});
